@@ -1,0 +1,40 @@
+subsystem graphics
+    devname uevent_devpath
+    dirname /dev/graphics
+
+subsystem input
+    devname uevent_devpath
+    dirname /dev/input
+
+subsystem sound
+    devname uevent_devpath
+    dirname /dev/snd
+
+/dev/null                 0666   root       root
+/dev/zero                 0666   root       root
+/dev/full                 0666   root       root
+/dev/ptmx                 0666   root       root
+/dev/tty                  0666   root       root
+/dev/random               0666   root       root
+/dev/urandom              0666   root       root
+/dev/hw_random            0440   root       system
+/dev/ashmem               0666   root       root
+/dev/binder               0666   root       root
+/dev/hwbinder             0666   root       root
+/dev/vndbinder            0666   root       root
+
+/dev/kgsl                 0666   root       root
+/dev/graphics/*           0660   root       graphics
+/dev/input/*              0660   root       input
+/dev/diag                 0660   radio      radio
+/dev/ttyMSM0              0600   bluetooth  bluetooth
+/dev/uhid                 0660   uhid       uhid
+/dev/uinput               0660   system     bluetooth
+/dev/usb_accessory        0660   root       usb
+/dev/mtp_usb              0660   root       mtp
+/dev/bus/usb/*            0660   root       usb
+
+/sys/devices/virtual/input/input*   enable      0660  root   input
+/sys/devices/virtual/input/input*   poll_delay  0660  root   input
+/sys/class/leds/lcd-backlight       brightness  0664  root   graphics
+/sys/class/leds/lcd-backlight-2     brightness  0664  root   graphics

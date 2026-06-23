@@ -1,0 +1,2 @@
+allow recovery sysfs_android_usb:dir search;
+allow recovery sysfs_android_usb:file { getattr open read write };
