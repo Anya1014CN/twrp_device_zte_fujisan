@@ -21,6 +21,8 @@ ramdisk small for the stock msm8996 bootloader.
 - Board platform: `msm8996`
 - Boot hardware: `qcom`
 - Kernel SHA1: `bac4b83eae4612bb2936b0ea7c231c77d0d47918`
+- Recovery images must be boot-signed. The stock and known-booting TWRP images
+  both carry a DER boot signature trailer for `/recovery`.
 
 ## Display and input notes
 
