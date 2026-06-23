@@ -12,13 +12,15 @@ ramdisk small for the stock msm8996 bootloader.
 
 - Stock boot image: `../booto.img`
 - Stock recovery image: `../recoveryo.img`
-- Kernel: extracted from stock recovery into `prebuilt/kernel`
+- Kernel: taken from the known-booting early fujisan TWRP image
+  `../recoverytwrp.img`
 - Boot image page size: `4096`
 - Kernel base: `0x80000000`
 - Ramdisk offset: `0x01000000`
 - Tags offset: `0x00000100`
 - Board platform: `msm8996`
 - Boot hardware: `qcom`
+- Kernel SHA1: `bac4b83eae4612bb2936b0ea7c231c77d0d47918`
 
 ## Display and input notes
 
