@@ -5,7 +5,8 @@ This is a bring-up oriented device tree for building TWRP against the Android
 
 The first-pass priorities are booting recovery, main display output, main touch
 input, and recovery ADB. The secondary display is intentionally not treated as a
-target surface.
+target surface. Nonessential extras are disabled initially to keep the recovery
+ramdisk small for the stock msm8996 bootloader.
 
 ## Local source data
 
