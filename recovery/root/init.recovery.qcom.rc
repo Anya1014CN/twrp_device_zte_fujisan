@@ -1,0 +1,20 @@
+on init
+    write /sys/class/leds/lcd-backlight-2/brightness 200
+    write /sys/class/leds/lcd-backlight/brightness 0
+    write /sys/class/android_usb/android0/f_ffs/aliases adb
+
+on boot
+    chmod 0660 /dev/graphics/fb0
+    chmod 0660 /dev/graphics/fb1
+    chmod 0660 /dev/input/event2
+    chmod 0660 /dev/input/event6
+    chown root graphics /dev/graphics/fb0
+    chown root graphics /dev/graphics/fb1
+    chown root input /dev/input/event2
+    chown root input /dev/input/event6
+
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 18D1
+    write /sys/class/android_usb/android0/idProduct D001
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/enable 1
