@@ -2,7 +2,7 @@
 # mount point    fstype    block device                                                alternate block devices                                                                 flags
 
 /system          ext4      /dev/block/platform/soc/7464900.sdhci/by-name/system        /dev/block/bootdevice/by-name/system    /dev/block/by-name/system    flags=display="System";backup=1
-/data            f2fs      /dev/block/platform/soc/7464900.sdhci/by-name/userdata      /dev/block/bootdevice/by-name/userdata  /dev/block/by-name/userdata  flags=display="Data";backup=1;wipeingui;forceencrypt=/dev/block/platform/soc/7464900.sdhci/by-name/cryptkey
+/data            f2fs      /dev/block/platform/soc/7464900.sdhci/by-name/userdata      /dev/block/bootdevice/by-name/userdata  /dev/block/by-name/userdata  flags=display="Data";backup=1;wipeingui;forceencrypt=/dev/block/bootdevice/by-name/cryptkey
 /cache           ext4      /dev/block/platform/soc/7464900.sdhci/by-name/cache         /dev/block/bootdevice/by-name/cache     /dev/block/by-name/cache     flags=display="Cache";backup=1;wipeingui
 
 /boot            emmc      /dev/block/platform/soc/7464900.sdhci/by-name/boot          /dev/block/bootdevice/by-name/boot      /dev/block/by-name/boot      flags=display="Boot";backup=1;flashimg=1
