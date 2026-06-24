@@ -1,11 +1,13 @@
 # TWRP fstab for ZTE Axon M Z999 (fujisan)
-# mount point    fstype    block device                                                flags
+# mount point    fstype    block device                                                alternate block devices                                                                 flags
 
-/system          ext4      /dev/block/platform/soc/7464900.sdhci/by-name/system        flags=display="System";backup=1
-/data            f2fs      /dev/block/platform/soc/7464900.sdhci/by-name/userdata      flags=display="Data";backup=1;wipeingui;forceencrypt=/dev/block/platform/soc/7464900.sdhci/by-name/cryptkey
-/cache           ext4      /dev/block/platform/soc/7464900.sdhci/by-name/cache         flags=display="Cache";backup=1;wipeingui
+/system          ext4      /dev/block/platform/soc/7464900.sdhci/by-name/system        /dev/block/bootdevice/by-name/system    /dev/block/by-name/system    flags=display="System";backup=1
+/data            f2fs      /dev/block/platform/soc/7464900.sdhci/by-name/userdata      /dev/block/bootdevice/by-name/userdata  /dev/block/by-name/userdata  flags=display="Data";backup=1;wipeingui;forceencrypt=/dev/block/platform/soc/7464900.sdhci/by-name/cryptkey
+/cache           ext4      /dev/block/platform/soc/7464900.sdhci/by-name/cache         /dev/block/bootdevice/by-name/cache     /dev/block/by-name/cache     flags=display="Cache";backup=1;wipeingui
 
-/boot            emmc      /dev/block/platform/soc/7464900.sdhci/by-name/boot          flags=display="Boot";backup=1;flashimg=1
+/boot            emmc      /dev/block/platform/soc/7464900.sdhci/by-name/boot          /dev/block/bootdevice/by-name/boot      /dev/block/by-name/boot      flags=display="Boot";backup=1;flashimg=1
+/system_image    emmc      /dev/block/platform/soc/7464900.sdhci/by-name/system        /dev/block/bootdevice/by-name/system    /dev/block/by-name/system    flags=display="System Image";backup=1;flashimg=1
+/recovery        emmc      /dev/block/platform/soc/7464900.sdhci/by-name/recovery      /dev/block/bootdevice/by-name/recovery  /dev/block/by-name/recovery  flags=display="Recovery";backup=1;flashimg=1
 
 /external_sd     vfat      /dev/block/mmcblk1p1      /dev/block/mmcblk1                flags=display="Micro SD Card";storage;wipeingui;removable
 /usb_otg         vfat      /dev/block/sda1           /dev/block/sda                    flags=display="USB OTG";storage;wipeingui;removable
