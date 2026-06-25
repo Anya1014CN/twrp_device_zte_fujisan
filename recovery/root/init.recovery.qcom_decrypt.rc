@@ -5,6 +5,7 @@ on fs
     chown system system /dev/ion
 
 on property:ro.crypto.state=encrypted
+    start qcom_servicemanager
     start qcom_hwservicemanager
     start prepdecrypt
 
@@ -24,10 +25,17 @@ service prepdecrypt /sbin/prepdecrypt.sh
     oneshot
     seclabel u:r:recovery:s0
 
-service qcom_hwservicemanager /system/bin/hwservicemanager
+service qcom_servicemanager /sbin/servicemanager
+    user root
+    group root readproc
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service qcom_hwservicemanager /sbin/hwservicemanager
     user root
     group root
-    setenv LD_LIBRARY_PATH /system/lib64:/system/lib
+    onrestart setprop hwservicemanager.ready false
     disabled
     oneshot
     seclabel u:r:recovery:s0
