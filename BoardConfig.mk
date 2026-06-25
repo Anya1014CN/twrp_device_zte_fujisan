@@ -63,6 +63,7 @@ TW_INPUT_BLACKLIST := "qbt1000_key_input"
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := false
 TW_INCLUDE_CRYPTO_FBE := false
+TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd keymaster-3-0 hwservicemanager
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_NTFS_3G := true
