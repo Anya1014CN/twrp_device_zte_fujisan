@@ -8,10 +8,10 @@ LOCAL_MODULE := libcryptfs_hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := qcom
 
-LOCAL_SRC_FILES := ../../../../vendor/qcom/opensource/cryptfs_hw/cryptfs_hw.c
+LOCAL_SRC_FILES := cryptfs_hw.c
 
 LOCAL_C_INCLUDES := \
-    vendor/qcom/opensource/cryptfs_hw \
+    $(LOCAL_PATH) \
     hardware/libhardware/include/hardware \
     system/vold \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
