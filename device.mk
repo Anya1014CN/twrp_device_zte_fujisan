@@ -13,6 +13,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/gpio-keys.kl:root/system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl
 
+PRODUCT_PACKAGES += \
+    fujisan_init_recovery_qcom_rc \
+    fujisan_init_recovery_vold_decrypt_rc \
+    fujisan_ueventd_rc \
+    fujisan_ueventd_qcom_rc \
+    fujisan_postrecoveryboot_sh \
+    fujisan_setup_decrypt_sh \
+    fujisan_touchfilter_sh \
+    fujisan_synaptics_dsx_idc \
+    fujisan_zte_touchscreen_idc \
+    fujisan_gpio_keys_kl \
+    fujisan_qpnp_pon_kl
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.adb.secure=0 \
