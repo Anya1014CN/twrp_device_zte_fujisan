@@ -1,3 +1,8 @@
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name /dev/block/by-name
+
 on init
     write /sys/class/leds/lcd-backlight-2/brightness 200
     write /sys/class/leds/lcd-backlight/brightness 0
