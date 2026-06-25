@@ -66,10 +66,6 @@
 #define UPDATE_HW_DISK_ENC_KEY 2
 #define MAX_DEVICE_ID_LENGTH 4 /* 4 = 3 (MAX_SOC_ID_LENGTH) + 1 */
 
-static unsigned int cpu_id[] = {
-	239, /* MSM8939 SOC ID */
-};
-
 #define QSEECOM_UP_CHECK_COUNT 10
 
 static int loaded_library = 0;
