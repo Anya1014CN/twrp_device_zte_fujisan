@@ -1,0 +1,31 @@
+cc_library_headers {
+    name: "libcryptfs_hw_headers",
+    vendor_available: true,
+    recovery_available: true,
+    export_include_dirs: ["."],
+}
+
+cc_library_shared {
+    name: "libcryptfs_hw",
+    vendor: true,
+    recovery_available: true,
+    srcs: ["cryptfs_hw.c"],
+    header_libs: ["libcryptfs_hw_headers"],
+    export_header_lib_headers: ["libcryptfs_hw_headers"],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libdl",
+        "libhardware",
+        "liblog",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+    include_dirs: [
+        ".",
+        "hardware/libhardware/include",
+        "system/vold",
+    ],
+}
