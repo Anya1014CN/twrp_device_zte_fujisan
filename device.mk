@@ -1,17 +1,14 @@
 LOCAL_PATH := device/zte/fujisan
 
-PRODUCT_COPY_FILES +=
-
-PRODUCT_PACKAGES += \
-    fujisan_init_recovery_qcom_rc \
-    fujisan_ueventd_rc \
-    fujisan_ueventd_qcom_rc \
-    fujisan_postrecoveryboot_sh \
-    fujisan_touchfilter_sh \
-    fujisan_synaptics_dsx_idc \
-    fujisan_zte_touchscreen_idc \
-    fujisan_gpio_keys_kl \
-    fujisan_qpnp_pon_kl
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(LOCAL_PATH)/recovery/root/ueventd.rc:root/ueventd.rc \
+    $(LOCAL_PATH)/recovery/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(LOCAL_PATH)/recovery/root/sbin/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh \
+    $(LOCAL_PATH)/recovery/root/system/usr/idc/synaptics_dsx.idc:root/system/usr/idc/synaptics_dsx.idc \
+    $(LOCAL_PATH)/recovery/root/system/usr/idc/zte-touchscreen.idc:root/system/usr/idc/zte-touchscreen.idc \
+    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/gpio-keys.kl:root/system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \

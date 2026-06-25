@@ -51,7 +51,8 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # TWRP
 TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
+TW_DEFAULT_LANGUAGE := zh_CN
+TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := false
 TW_NO_SCREEN_BLANK := true
 TW_NO_SCREEN_TIMEOUT := true
@@ -59,7 +60,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight-2/brightness"
 TW_SECONDARY_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 200
-TW_INPUT_BLACKLIST := "qbt1000_key_input"
+TW_INPUT_BLACKLIST := "zte-touchscreen-2nd zte-touchsrceen-3nd qbt1000_key_input"
 TW_INCLUDE_CRYPTO := false
 TW_INCLUDE_FBE := false
 TW_NO_EXFAT := true
@@ -77,4 +78,4 @@ TW_EXCLUDE_TWRPAPP := true
 TW_USE_TOOLBOX := true
 TW_HAS_DOWNLOAD_MODE := false
 TW_NO_REBOOT_BOOTLOADER := false
-TW_DEVICE_VERSION := AxonM-Anya1014
+TW_DEVICE_VERSION := AxonM-fujisan-oreo

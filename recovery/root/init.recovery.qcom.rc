@@ -4,19 +4,14 @@ on init
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 on boot
-    symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
-    symlink /dev/block/platform/soc/7464900.sdhci/by-name /dev/block/by-name
-
     chmod 0660 /dev/graphics/fb0
     chmod 0660 /dev/graphics/fb1
+    chmod 0660 /dev/input/event2
     chmod 0660 /dev/input/event6
     chown root graphics /dev/graphics/fb0
     chown root graphics /dev/graphics/fb1
+    chown root input /dev/input/event2
     chown root input /dev/input/event6
-    rm /dev/input/event2
-    rm /dev/input/mouse1
-    rm /dev/input/event3
-    rm /dev/input/mouse2
 
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 18D1
