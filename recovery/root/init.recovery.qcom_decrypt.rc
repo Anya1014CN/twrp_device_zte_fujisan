@@ -43,24 +43,24 @@ service qcom_hwservicemanager /sbin/hwservicemanager
     seclabel u:r:recovery:s0
 
 service qseecomd /sbin/qseecomd
-    user root
-    group root
+    user system
+    group system drmrpc
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
 service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
-    user root
-    group root
+    user system
+    group system
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
 service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
-    user root
-    group root
+    user system
+    group system drmrpc
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot

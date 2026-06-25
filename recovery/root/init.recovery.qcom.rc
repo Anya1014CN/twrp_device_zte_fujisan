@@ -17,6 +17,7 @@ on init
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 on boot
+    wait /dev/block/bootdevice/by-name/modem
     umount /firmware
     mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
