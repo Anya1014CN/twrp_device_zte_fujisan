@@ -41,8 +41,6 @@
 #include "keymaster_common.h"
 #include "hardware.h"
 
-#define LOG_TAG "Cryptfs_hw"
-
 #if defined(__LP64__)
 #define QSEECOM_LIBRARY_PATH "/vendor/lib64/libQSEEComAPI.so"
 #else
@@ -298,7 +296,6 @@ int is_ice_enabled(void)
 {
   char prop_storage[PATH_MAX];
   int storage_type = 0;
-  int fd;
 
   if (property_get("ro.boot.bootdevice", prop_storage, "")) {
     if (strstr(prop_storage, "ufs")) {
