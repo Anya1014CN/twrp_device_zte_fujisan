@@ -63,11 +63,9 @@ TW_DEFAULT_BRIGHTNESS := 200
 TW_INPUT_BLACKLIST := "zte-touchscreen-2nd zte-touchsrceen-3nd qbt1000_key_input"
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := false
-TW_CRYPTO_USE_SYSTEM_VOLD := \
-    qseecomd \
-    hwservicemanager \
-    servicemanager \
-    keymaster-3-0
+TW_INCLUDE_RESETPROP := true
+TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_NTFS_3G := true

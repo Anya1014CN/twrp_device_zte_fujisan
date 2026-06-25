@@ -1,0 +1,49 @@
+on fs
+    chmod 0660 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+on property:ro.crypto.state=encrypted
+    start qcom_hwservicemanager
+    start prepdecrypt
+
+on property:crypto.ready=1 && property:hwservicemanager.ready=true
+    start qseecomd
+
+on property:sys.listeners.registered=true
+    start keymaster-3-0
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+
+service prepdecrypt /sbin/prepdecrypt.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service qcom_hwservicemanager /system/bin/hwservicemanager
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /system/lib64:/system/lib
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service qseecomd /sbin/qseecomd
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0

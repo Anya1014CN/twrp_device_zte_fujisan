@@ -3,14 +3,17 @@ LOCAL_PATH := device/zte/fujisan
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.qcom:root/fstab.qcom \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/recovery/root/init.recovery.vold_decrypt.servicemanager.rc:root/init.recovery.vold_decrypt.servicemanager.rc \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom_decrypt.rc:root/init.recovery.qcom_decrypt.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.rc:root/ueventd.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
     $(LOCAL_PATH)/recovery/root/sbin/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh \
+    $(LOCAL_PATH)/recovery/root/sbin/prepdecrypt.sh:root/sbin/prepdecrypt.sh \
+    $(LOCAL_PATH)/recovery/root/system/manifest.xml:root/system/manifest.xml \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/synaptics_dsx.idc:root/system/usr/idc/synaptics_dsx.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/zte-touchscreen.idc:root/system/usr/idc/zte-touchscreen.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/gpio-keys.kl:root/system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl
+    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl \
+    $(LOCAL_PATH)/recovery/root/vendor/manifest.xml:root/vendor/manifest.xml
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
