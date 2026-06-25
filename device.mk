@@ -10,6 +10,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/zte-touchscreen.idc:root/system/usr/idc/zte-touchscreen.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/gpio-keys.kl:root/system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl \
+    $(LOCAL_PATH)/recovery/root/vendor/.placeholder:root/vendor/.placeholder \
+    $(LOCAL_PATH)/recovery/root/vendor/bin/.placeholder:root/vendor/bin/.placeholder \
+    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/.placeholder:root/vendor/bin/hw/.placeholder \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/.placeholder:root/vendor/lib64/.placeholder \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/.placeholder:root/vendor/lib64/hw/.placeholder \
     $(LOCAL_PATH)/recovery/root/vendor/bin/qseecomd:root/vendor/bin/qseecomd \
     $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service \
     $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.keymaster@3.0-service:root/vendor/bin/hw/android.hardware.keymaster@3.0-service \
