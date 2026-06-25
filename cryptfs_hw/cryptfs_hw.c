@@ -204,7 +204,7 @@ static int set_key(const char* currentpasswd, const char* passwd, const char* en
             }
             if(err < 0) {
                 if(ERR_MAX_PASSWORD_ATTEMPTS == err)
-                    wipe_userdata();
+                    SLOGE("max password attempts reached; refusing to wipe userdata from recovery");
             }
             secure_memset(tmp_passwd, 0, MAX_PASSWORD_LEN);
             free(tmp_passwd);
