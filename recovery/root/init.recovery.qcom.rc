@@ -21,3 +21,11 @@ on boot
     write /sys/class/android_usb/android0/idProduct D001
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable 1
+
+    start touchfilter
+
+service touchfilter /sbin/sh /sbin/touchfilter.sh
+    class main
+    user root
+    group root input
+    disabled
