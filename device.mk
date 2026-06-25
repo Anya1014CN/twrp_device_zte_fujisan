@@ -9,31 +9,26 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/synaptics_dsx.idc:root/system/usr/idc/synaptics_dsx.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/zte-touchscreen.idc:root/system/usr/idc/zte-touchscreen.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/keylayout/gpio-keys.kl:root/system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl \
-    $(LOCAL_PATH)/recovery/root/vendor/.placeholder:root/vendor/.placeholder \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/.placeholder:root/vendor/bin/.placeholder \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/.placeholder:root/vendor/bin/hw/.placeholder \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/.placeholder:root/vendor/lib64/.placeholder \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/.placeholder:root/vendor/lib64/hw/.placeholder \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/qseecomd:root/vendor/bin/qseecomd \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.keymaster@3.0-service:root/vendor/bin/hw/android.hardware.keymaster@3.0-service \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libQSEEComAPI.so:root/vendor/lib64/libQSEEComAPI.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmfs.so:root/vendor/lib64/libdrmfs.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmtime.so:root/vendor/lib64/libdrmtime.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/librpmb.so:root/vendor/lib64/librpmb.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libssd.so:root/vendor/lib64/libssd.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libtime_genoff.so:root/vendor/lib64/libtime_genoff.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterdeviceutils.so:root/vendor/lib64/libkeymasterdeviceutils.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterprovision.so:root/vendor/lib64/libkeymasterprovision.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterutils.so:root/vendor/lib64/libkeymasterutils.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so:root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/gatekeeper.msm8996.so:root/vendor/lib64/hw/gatekeeper.msm8996.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/keystore.msm8996.so:root/vendor/lib64/hw/keystore.msm8996.so
+    $(LOCAL_PATH)/recovery/root/system/usr/keylayout/qpnp_pon.kl:root/system/usr/keylayout/qpnp_pon.kl
 
 PRODUCT_PACKAGES += \
-    qcom_decrypt
+    qcom_decrypt \
+    fujisan_vendor_qseecomd \
+    fujisan_vendor_gatekeeper_service \
+    fujisan_vendor_keymaster_service \
+    fujisan_vendor_libQSEEComAPI \
+    fujisan_vendor_libdrmfs \
+    fujisan_vendor_libdrmtime \
+    fujisan_vendor_librpmb \
+    fujisan_vendor_libssd \
+    fujisan_vendor_libtime_genoff \
+    fujisan_vendor_libkeymasterdeviceutils \
+    fujisan_vendor_libkeymasterprovision \
+    fujisan_vendor_libkeymasterutils \
+    fujisan_vendor_gatekeeper_impl \
+    fujisan_vendor_keymaster_impl \
+    fujisan_vendor_gatekeeper_msm8996 \
+    fujisan_vendor_keystore_msm8996
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
