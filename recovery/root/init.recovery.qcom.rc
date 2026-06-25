@@ -1,9 +1,15 @@
 import /init.recovery.qcom_decrypt.rc
 
+on early-init
+    mkdir /firmware 0771 system system
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name /dev/block/by-name
+    wait /dev/block/bootdevice/by-name/modem
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0
+    symlink /firmware/image /vendor/firmware
 
 on init
     write /sys/class/leds/lcd-backlight-2/brightness 200
