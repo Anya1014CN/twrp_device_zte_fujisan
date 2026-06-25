@@ -16,23 +16,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/manifest.xml:root/system/vendor/manifest.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/qseecomd:root/vendor/bin/qseecomd \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service \
-    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.keymaster@3.0-service:root/vendor/bin/hw/android.hardware.keymaster@3.0-service \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libQSEEComAPI.so:root/vendor/lib64/libQSEEComAPI.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdiag.so:root/vendor/lib64/libdiag.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmfs.so:root/vendor/lib64/libdrmfs.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmtime.so:root/vendor/lib64/libdrmtime.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterdeviceutils.so:root/vendor/lib64/libkeymasterdeviceutils.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterprovision.so:root/vendor/lib64/libkeymasterprovision.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterutils.so:root/vendor/lib64/libkeymasterutils.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/librpmb.so:root/vendor/lib64/librpmb.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libssd.so:root/vendor/lib64/libssd.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/libtime_genoff.so:root/vendor/lib64/libtime_genoff.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so:root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/gatekeeper.msm8996.so:root/vendor/lib64/hw/gatekeeper.msm8996.so \
-    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/keystore.msm8996.so:root/vendor/lib64/hw/keystore.msm8996.so
+    $(LOCAL_PATH)/recovery/root/vendor/bin/qseecomd:root/system/vendor/bin/qseecomd \
+    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:root/system/vendor/bin/hw/android.hardware.gatekeeper@1.0-service \
+    $(LOCAL_PATH)/recovery/root/vendor/bin/hw/android.hardware.keymaster@3.0-service:root/system/vendor/bin/hw/android.hardware.keymaster@3.0-service \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libQSEEComAPI.so:root/system/vendor/lib64/libQSEEComAPI.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdiag.so:root/system/vendor/lib64/libdiag.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmfs.so:root/system/vendor/lib64/libdrmfs.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libdrmtime.so:root/system/vendor/lib64/libdrmtime.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterdeviceutils.so:root/system/vendor/lib64/libkeymasterdeviceutils.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterprovision.so:root/system/vendor/lib64/libkeymasterprovision.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libkeymasterutils.so:root/system/vendor/lib64/libkeymasterutils.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/librpmb.so:root/system/vendor/lib64/librpmb.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libssd.so:root/system/vendor/lib64/libssd.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/libtime_genoff.so:root/system/vendor/lib64/libtime_genoff.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so:root/system/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:root/system/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/gatekeeper.msm8996.so:root/system/vendor/lib64/hw/gatekeeper.msm8996.so \
+    $(LOCAL_PATH)/recovery/root/vendor/lib64/hw/keystore.msm8996.so:root/system/vendor/lib64/hw/keystore.msm8996.so
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
