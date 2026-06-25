@@ -9,7 +9,10 @@ on property:ro.crypto.state=encrypted
     start qcom_hwservicemanager
     start prepdecrypt
 
-on property:crypto.ready=1 && property:hwservicemanager.ready=true
+on property:crypto.ready=1
+    start mountfirmware
+
+on property:crypto.ready=1 && property:hwservicemanager.ready=true && property:firmware.ready=1
     start qseecomd
 
 on property:sys.listeners.registered=true
@@ -21,6 +24,13 @@ on property:vendor.sys.listeners.registered=true
     start keymaster-3-0
 
 service prepdecrypt /sbin/prepdecrypt.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service mountfirmware /sbin/mountfirmware.sh
     user root
     group root
     disabled

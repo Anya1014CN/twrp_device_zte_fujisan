@@ -6,6 +6,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom_decrypt.rc:root/init.recovery.qcom_decrypt.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.rc:root/ueventd.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(LOCAL_PATH)/recovery/root/sbin/mountfirmware.sh:root/sbin/mountfirmware.sh \
     $(LOCAL_PATH)/recovery/root/sbin/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh \
     $(LOCAL_PATH)/recovery/root/sbin/prepdecrypt.sh:root/sbin/prepdecrypt.sh \
     $(LOCAL_PATH)/recovery/root/system/manifest.xml:root/system/manifest.xml \

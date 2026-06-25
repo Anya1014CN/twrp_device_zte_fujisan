@@ -10,8 +10,6 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name /dev/block/by-name
-    wait /dev/block/bootdevice/by-name/modem
-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
     symlink /firmware/image /vendor/firmware
 
 on init
@@ -20,10 +18,6 @@ on init
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 on boot
-    wait /dev/block/bootdevice/by-name/modem
-    umount /firmware
-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
-
     chmod 0660 /dev/graphics/fb0
     chmod 0660 /dev/graphics/fb1
     chmod 0660 /dev/input/event2
