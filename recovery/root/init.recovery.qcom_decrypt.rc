@@ -12,7 +12,7 @@ on property:ro.crypto.state=encrypted
 on property:crypto.ready=1
     start mountfirmware
 
-on property:crypto.ready=1 && property:hwservicemanager.ready=true && property:firmware.ready=1
+on property:crypto.ready=1 && property:hwservicemanager.ready=true
     start qseecomd
 
 on property:sys.listeners.registered=true
@@ -53,24 +53,24 @@ service qcom_hwservicemanager /sbin/hwservicemanager
     seclabel u:r:recovery:s0
 
 service qseecomd /sbin/qseecomd
-    user system
-    group system drmrpc
+    user root
+    group root
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
 service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
-    user system
-    group system
+    user root
+    group root
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
 service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
-    user system
-    group system drmrpc
+    user root
+    group root
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
     disabled
     oneshot
