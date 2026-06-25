@@ -1,0 +1,2 @@
+# Legacy TWRP crypto import stub.
+# Qualcomm decryption is handled by init.recovery.qcom_decrypt.rc.

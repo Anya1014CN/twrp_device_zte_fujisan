@@ -45,6 +45,8 @@ include $(BUILD_PREBUILT)
 endef
 
 $(eval $(call fujisan-copy-to-recovery-root,fujisan_init_recovery_qcom_rc,recovery/root/init.recovery.qcom.rc,,init.recovery.qcom.rc))
+$(eval $(call fujisan-copy-to-recovery-root,fujisan_init_recovery_vold_decrypt_rc,recovery/root/init.recovery.vold_decrypt.rc,,init.recovery.vold_decrypt.rc))
+$(eval $(call fujisan-copy-to-recovery-root,fujisan_init_recovery_qcom_decrypt_fbe_rc,recovery/root/init.recovery.qcom_decrypt.fbe.rc,,init.recovery.qcom_decrypt.fbe.rc))
 $(eval $(call fujisan-copy-to-recovery-root,fujisan_ueventd_rc,recovery/root/ueventd.rc,,ueventd.rc))
 $(eval $(call fujisan-copy-to-recovery-root,fujisan_ueventd_qcom_rc,recovery/root/ueventd.qcom.rc,,ueventd.qcom.rc))
 $(eval $(call fujisan-copy-exec-to-recovery-root,fujisan_postrecoveryboot_sh,recovery/root/sbin/postrecoveryboot.sh,/sbin,postrecoveryboot.sh))

@@ -1,0 +1,2 @@
+# FBE is disabled for this device.
+# Keep an empty stub so init imports do not resolve to missing files.

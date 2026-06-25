@@ -5,6 +5,8 @@ PRODUCT_COPY_FILES +=
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     fujisan_init_recovery_qcom_rc \
+    fujisan_init_recovery_vold_decrypt_rc \
+    fujisan_init_recovery_qcom_decrypt_fbe_rc \
     fujisan_ueventd_rc \
     fujisan_ueventd_qcom_rc \
     fujisan_postrecoveryboot_sh \
