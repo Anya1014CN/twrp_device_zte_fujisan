@@ -13,9 +13,11 @@ on property:crypto.ready=1 && property:hwservicemanager.ready=true
     start qseecomd
 
 on property:sys.listeners.registered=true
+    start gatekeeper-1-0
     start keymaster-3-0
 
 on property:vendor.sys.listeners.registered=true
+    start gatekeeper-1-0
     start keymaster-3-0
 
 service prepdecrypt /sbin/prepdecrypt.sh
@@ -41,6 +43,14 @@ service qcom_hwservicemanager /sbin/hwservicemanager
     seclabel u:r:recovery:s0
 
 service qseecomd /sbin/qseecomd
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
     user root
     group root
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/sbin:/system/lib64:/system/lib
