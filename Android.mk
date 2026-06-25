@@ -72,3 +72,5 @@ $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_gatekeeper_impl,rec
 $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_keymaster_impl,recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so,/vendor/lib64/hw,android.hardware.keymaster@3.0-impl.so))
 $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_gatekeeper_msm8996,recovery/root/vendor/lib64/hw/gatekeeper.msm8996.so,/vendor/lib64/hw,gatekeeper.msm8996.so))
 $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_keystore_msm8996,recovery/root/vendor/lib64/hw/keystore.msm8996.so,/vendor/lib64/hw,keystore.msm8996.so))
+
+include $(LOCAL_PATH)/cryptfs_hw/Android.mk
