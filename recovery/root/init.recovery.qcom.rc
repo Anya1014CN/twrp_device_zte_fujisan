@@ -2,6 +2,8 @@ import /init.recovery.qcom_decrypt.rc
 
 on early-init
     chmod 0755 /sbin
+    chmod 0755 /sbin/linker
+    chmod 0755 /sbin/linker64
     mkdir /firmware 0771 system system
 
 on fs
