@@ -48,8 +48,6 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USES_MMCUTILS := true
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH := device/zte/fujisan/cryptfs_hw
 
 # TWRP
 TW_THEME := portrait_hdpi
@@ -62,12 +60,8 @@ TW_SECONDARY_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 200
 TW_INPUT_BLACKLIST := "qbt1000_key_input"
-BOARD_USES_QCOM_DECRYPTION := true
-TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO := false
 TW_INCLUDE_FBE := false
-TW_INCLUDE_CRYPTO_FBE := false
-TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd hwservicemanager servicemanager keymaster-3-0
-TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_NTFS_3G := true
@@ -84,13 +78,3 @@ TW_USE_TOOLBOX := true
 TW_HAS_DOWNLOAD_MODE := false
 TW_NO_REBOOT_BOOTLOADER := false
 TW_DEVICE_VERSION := AxonM-Anya1014
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    hwservicemanager \
-    servicemanager \
-    android.hidl.base@1.0
-
-TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
-    $(TARGET_OUT)/bin/hwservicemanager \
-    $(TARGET_OUT)/bin/servicemanager \
-    $(TARGET_OUT)/lib64/android.hidl.base@1.0.so

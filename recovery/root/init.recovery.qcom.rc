@@ -1,10 +1,7 @@
-import /init.recovery.qcom_decrypt.rc
-
 on init
     write /sys/class/leds/lcd-backlight-2/brightness 200
     write /sys/class/leds/lcd-backlight/brightness 0
     write /sys/class/android_usb/android0/f_ffs/aliases adb
-    setprop prepdecrypt.loglevel 2
 
 on boot
     symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
@@ -26,6 +23,3 @@ on boot
     write /sys/class/android_usb/android0/idProduct D001
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable 1
-
-on property:ro.crypto.type=block
-    start prepdecrypt
