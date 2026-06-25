@@ -73,4 +73,4 @@ $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_keymaster_impl,reco
 $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_gatekeeper_msm8996,recovery/root/vendor/lib64/hw/gatekeeper.msm8996.so,/vendor/lib64/hw,gatekeeper.msm8996.so))
 $(eval $(call fujisan-copy-to-recovery-vendor,fujisan_vendor_keystore_msm8996,recovery/root/vendor/lib64/hw/keystore.msm8996.so,/vendor/lib64/hw,keystore.msm8996.so))
 
-include $(LOCAL_PATH)/cryptfs_hw/Android.mk
+include $(call all-makefiles-under,$(LOCAL_PATH)/cryptfs_hw)
