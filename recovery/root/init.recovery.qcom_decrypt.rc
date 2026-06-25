@@ -16,10 +16,12 @@ on property:crypto.ready=1 && property:hwservicemanager.ready=true
     start qseecomd
 
 on property:sys.listeners.registered=true
+    setprop sys.keymaster.loaded true
     start gatekeeper-1-0
     start keymaster-3-0
 
 on property:vendor.sys.listeners.registered=true
+    setprop sys.keymaster.loaded true
     start gatekeeper-1-0
     start keymaster-3-0
 
