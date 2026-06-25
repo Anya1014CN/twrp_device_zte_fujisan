@@ -63,7 +63,6 @@ TW_INPUT_BLACKLIST := "zte-touchscreen-2nd\x0aqbt1000_key_input"
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := false
 TW_INCLUDE_CRYPTO_FBE := false
-TW_CRYPTO_USE_SYSTEM_VOLD := hwservicemanager qseecomd keymaster-3-0 gatekeeper-1-0 gatekeeperd
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_NTFS_3G := true
