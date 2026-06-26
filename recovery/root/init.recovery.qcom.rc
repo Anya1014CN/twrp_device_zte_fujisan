@@ -13,8 +13,8 @@ on fs
     symlink /firmware/image /vendor/firmware
 
 on init
-    write /sys/class/leds/lcd-backlight-2/brightness 200
-    write /sys/class/leds/lcd-backlight/brightness 0
+    write /sys/class/leds/lcd-backlight/brightness 200
+    write /sys/class/leds/lcd-backlight-2/brightness 0
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 on boot

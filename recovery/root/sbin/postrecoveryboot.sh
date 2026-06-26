@@ -1,8 +1,8 @@
 #!/sbin/sh
 
 apply_panel_state() {
-echo 200 > /sys/class/leds/lcd-backlight-2/brightness 2>/dev/null
-echo 0 > /sys/class/leds/lcd-backlight/brightness 2>/dev/null
+echo 200 > /sys/class/leds/lcd-backlight/brightness 2>/dev/null
+echo 0 > /sys/class/leds/lcd-backlight-2/brightness 2>/dev/null
 echo 0 > /sys/class/graphics/fb0/blank 2>/dev/null
 echo 4 > /sys/class/graphics/fb1/blank 2>/dev/null
 echo 4 > /sys/class/graphics/fb2/blank 2>/dev/null
