@@ -1,5 +1,4 @@
 diff --git a/gui/blanktimer.cpp b/gui/blanktimer.cpp
-index b631f77..2ad736e 100644
 --- a/gui/blanktimer.cpp
 +++ b/gui/blanktimer.cpp
 @@ -31,6 +31,15 @@ blanktimer::blanktimer(void) {
@@ -52,7 +51,6 @@ index b631f77..2ad736e 100644
  		blank();
  		PageManager::ChangeOverlay("lock");
 diff --git a/gui/pages.cpp b/gui/pages.cpp
-index 997d235..410b24e 100644
 --- a/gui/pages.cpp
 +++ b/gui/pages.cpp
 @@ -1563,6 +1563,7 @@ void PageManager::SetStartPage(const std::string& page_name) {
@@ -72,7 +70,6 @@ index 997d235..410b24e 100644
  		return mCurrentSet->SetOverlay(NULL);
  	else
 diff --git a/minuitwrp/graphics.cpp b/minuitwrp/graphics.cpp
-index 416431e..98aa3c4 100644
 --- a/minuitwrp/graphics.cpp
 +++ b/minuitwrp/graphics.cpp
 @@ -458,6 +458,7 @@ int gr_fb_height(void)
