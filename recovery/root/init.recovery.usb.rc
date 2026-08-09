@@ -21,7 +21,21 @@ on fs
     write /sys/devices/soc/6a00000.ssusb/mode peripheral
 
 on boot
+    setprop sys.usb.configfs 1
+    setprop sys.usb.controller 6a00000.dwc3
+    write /sys/devices/soc/6a00000.ssusb/mode peripheral
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
+    write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
+    write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+    setprop persist.sys.usb.config adb
+    setprop sys.usb.config none
     setprop sys.usb.config adb
+
+# Recovery uses configfs exclusively.  Do not fall back to the legacy
+# android_usb handlers if an inherited property sets this to 0.
+on property:sys.usb.configfs=0
+    setprop sys.usb.configfs 1
+    write /sys/devices/soc/6a00000.ssusb/mode peripheral
 
 on property:init.svc.adbd=stopped
     setprop sys.usb.ffs.ready 0
