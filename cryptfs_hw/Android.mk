@@ -13,12 +13,9 @@ LOCAL_SRC_FILES := cryptfs_hw.c
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH) \
     hardware/libhardware/include/hardware \
-    system/vold \
-    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+    system/vold
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
-
-LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_SHARED_LIBRARIES := \
     libcutils \
