@@ -60,6 +60,7 @@ TW_DEFAULT_BRIGHTNESS := 200
 # the driver's per-panel routing in init and accepts only the primary panel.
 TW_INPUT_BLACKLIST := "zte-touchscreen-2nd\x0azte-touchsrceen-3nd\x0aqbt1000_key_input"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_MTP := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := false
 TW_INCLUDE_RESETPROP := true
