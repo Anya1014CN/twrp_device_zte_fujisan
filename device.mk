@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/sbin/mountfirmware.sh:recovery/root/sbin/mountfirmware.sh \
     $(LOCAL_PATH)/recovery/root/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     $(LOCAL_PATH)/recovery/root/sbin/prepdecrypt.sh:recovery/root/sbin/prepdecrypt.sh \
+    $(LOCAL_PATH)/recovery/root/sbin/runatboot.sh:recovery/root/sbin/runatboot.sh \
     $(LOCAL_PATH)/recovery/root/system/manifest.xml:recovery/root/system/manifest.xml \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/synaptics_dsx.idc:recovery/root/system/usr/idc/synaptics_dsx.idc \
     $(LOCAL_PATH)/recovery/root/system/usr/idc/zte-touchscreen.idc:recovery/root/system/usr/idc/zte-touchscreen.idc \
