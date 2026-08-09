@@ -2,6 +2,7 @@ LOCAL_PATH := device/zte/fujisan
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.qcom:recovery/root/fstab.qcom \
+    $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:recovery/root/init.recovery.usb.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom_decrypt.rc:recovery/root/init.recovery.qcom_decrypt.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.rc:recovery/root/ueventd.rc \

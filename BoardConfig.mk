@@ -25,7 +25,7 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive androidboot.usbconfigfs=true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_FLASH_BLOCK_SIZE := 262144
 
@@ -56,7 +56,10 @@ TW_SCREEN_BLANK_ON_BOOT := false
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 200
-TW_INPUT_BLACKLIST := "zte-touchscreen-2nd zte-touchsrceen-3nd qbt1000_key_input"
+# TWRP separates blacklist entries with newlines, not spaces. Recovery enables
+# the driver's per-panel routing in init and accepts only the primary panel.
+TW_INPUT_BLACKLIST := "zte-touchscreen-2nd\x0azte-touchsrceen-3nd\x0aqbt1000_key_input"
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := false
 TW_INCLUDE_RESETPROP := true
